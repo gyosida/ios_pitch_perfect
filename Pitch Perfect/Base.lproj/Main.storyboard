@@ -112,9 +112,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button" image="Slow"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="35" y="102" width="102" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="makeSlowPlay:" destination="JZe-Ov-AHz" eventType="touchUpInside" id="DeZ-Jk-A7f"/>
                                 </connections>
@@ -123,9 +120,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button" image="Fast"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="271" y="102" width="99" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="makeFastPlay:" destination="JZe-Ov-AHz" eventType="touchUpInside" id="SGc-99-t8p"/>
                                 </connections>
@@ -134,35 +128,58 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button" image="Stop"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="502" width="50" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopPlaying:" destination="JZe-Ov-AHz" eventType="touchUpInside" id="e0r-FQ-8DG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9a-Vr-htY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="Chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="JZe-Ov-AHz" eventType="touchUpInside" id="k1v-W2-dp9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-Eg-h9W">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="DarthVader"/>
+                                <connections>
+                                    <action selector="playDarthVaderAudio:" destination="JZe-Ov-AHz" eventType="touchUpInside" id="01b-hZ-I1k"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="S9a-Vr-htY" firstAttribute="leading" secondItem="QwL-ad-gYi" secondAttribute="leadingMargin" constant="15" id="8fa-Cg-niG"/>
                             <constraint firstItem="Nvv-Xb-UjH" firstAttribute="centerX" secondItem="QwL-ad-gYi" secondAttribute="centerX" id="B2S-Wk-A3D"/>
+                            <constraint firstItem="3Hc-Eg-h9W" firstAttribute="top" secondItem="iF8-XL-bnA" secondAttribute="bottom" constant="48" id="BQs-yx-VUz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iF8-XL-bnA" secondAttribute="trailing" constant="15" id="DiO-kB-WGj"/>
                             <constraint firstItem="ee5-Us-RHY" firstAttribute="top" secondItem="6Fa-jz-6JF" secondAttribute="bottom" constant="38" id="RhZ-sJ-Bf6"/>
                             <constraint firstItem="iF8-XL-bnA" firstAttribute="top" secondItem="6Fa-jz-6JF" secondAttribute="bottom" constant="38" id="X69-wy-p7q"/>
                             <constraint firstItem="ee5-Us-RHY" firstAttribute="leading" secondItem="QwL-ad-gYi" secondAttribute="leadingMargin" constant="15" id="bHo-k2-56h"/>
                             <constraint firstItem="9XG-3l-hLB" firstAttribute="top" secondItem="Nvv-Xb-UjH" secondAttribute="bottom" constant="48" id="hJy-3P-jUn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Hc-Eg-h9W" secondAttribute="trailing" constant="15" id="hpQ-w6-cvg"/>
+                            <constraint firstItem="S9a-Vr-htY" firstAttribute="top" secondItem="ee5-Us-RHY" secondAttribute="bottom" constant="48" id="xEY-nd-23f"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ee5-Us-RHY"/>
                                 <exclude reference="iF8-XL-bnA"/>
                                 <exclude reference="Nvv-Xb-UjH"/>
+                                <exclude reference="S9a-Vr-htY"/>
+                                <exclude reference="3Hc-Eg-h9W"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="RhZ-sJ-Bf6"/>
                                 <exclude reference="bHo-k2-56h"/>
                                 <exclude reference="DiO-kB-WGj"/>
                                 <exclude reference="X69-wy-p7q"/>
+                                <exclude reference="8fa-Cg-niG"/>
+                                <exclude reference="xEY-nd-23f"/>
+                                <exclude reference="BQs-yx-VUz"/>
+                                <exclude reference="hpQ-w6-cvg"/>
                                 <exclude reference="B2S-Wk-A3D"/>
                                 <exclude reference="hJy-3P-jUn"/>
                             </mask>
@@ -172,12 +189,18 @@
                                 <include reference="ee5-Us-RHY"/>
                                 <include reference="iF8-XL-bnA"/>
                                 <include reference="Nvv-Xb-UjH"/>
+                                <include reference="S9a-Vr-htY"/>
+                                <include reference="3Hc-Eg-h9W"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="RhZ-sJ-Bf6"/>
                                 <include reference="bHo-k2-56h"/>
                                 <include reference="DiO-kB-WGj"/>
                                 <include reference="X69-wy-p7q"/>
+                                <include reference="8fa-Cg-niG"/>
+                                <include reference="xEY-nd-23f"/>
+                                <include reference="BQs-yx-VUz"/>
+                                <include reference="hpQ-w6-cvg"/>
                                 <include reference="B2S-Wk-A3D"/>
                                 <include reference="hJy-3P-jUn"/>
                             </mask>
@@ -209,6 +232,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Chipmunk" width="100" height="100"/>
+        <image name="DarthVader" width="100" height="100"/>
         <image name="Fast" width="100" height="100"/>
         <image name="Microphone" width="100" height="100"/>
         <image name="Slow" width="100" height="100"/>
